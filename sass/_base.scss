@@ -11,6 +11,18 @@ html {
 
 body {
   font-size: 1.8rem;
+  line-height: 28px;
   font-family: $font-default;
   font-weight: $fw-medium;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(
+    to bottom,
+    $color-white 40%,
+    rgba(131, 134, 154, 0.3)
+  );
 }

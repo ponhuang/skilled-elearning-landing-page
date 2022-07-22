@@ -1,3 +1,180 @@
+/*---------- HELPER CLASS ----------*/
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  border-style: none;
+  border-radius: 100px;
+  padding: 1.5rem 3rem;
+  color: $color-white;
+  cursor: pointer;
+}
+
+.heading-h1 {
+  font-size: 5.6rem;
+  line-height: 70px;
+  margin-bottom: 2.9rem;
+}
+
+.text {
+  color: $color-secondary-text;
+}
+
+/*---------- NAV ----------*/
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 3rem 6rem;
+  z-index: 50;
+  margin-bottom: 15rem;
+
+  .btn-dark {
+    background-color: $color-main-text;
+
+    &:hover {
+      background-color: $color-btn1-hover;
+    }
+  }
+}
+
+/*---------- MAIN ----------*/
+main {
+  padding: 3rem 6rem;
+  width: 90%;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+
 /*---------- HEADER ----------*/
 
+.header {
+  display: flex;
+  position: relative;
+  margin-bottom: 30rem;
+
+  .header-info {
+    width: Min(90%, 46rem);
+  }
+
+  &__img {
+    position: absolute;
+    top: -400px;
+    right: -450px;
+    z-index: 10;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .btn-gradient-1 {
+    background-image: linear-gradient(
+      180deg,
+      $color-gradient-orange,
+      $color-gradient-pink
+    );
+    margin-top: 4rem;
+
+    &:hover {
+      background-image: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.5)
+        ),
+        linear-gradient(180deg, $color-gradient-orange, $color-link-hover);
+    }
+  }
+}
+
 /*---------- FEATURE ----------*/
+.feature {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 8rem;
+  column-gap: 3rem;
+  width: Min(90%, 111rem);
+  margin-bottom: 14rem;
+
+  .cards {
+    width: 35rem;
+    border-radius: 15px;
+    padding: 6.4rem 3.2rem 4rem 3.2rem;
+    background-color: $color-white;
+    position: relative;
+
+    &__icons {
+      position: absolute;
+      top: -24px;
+      left: 32px;
+    }
+
+    &__content {
+      height: 21.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__texts {
+      margin-bottom: 2.4rem;
+    }
+
+    &__title {
+      font-size: 2.4rem;
+      font-weight: $fw-extra-bold;
+      margin-bottom: 2.4rem;
+    }
+
+    &__links {
+      text-decoration: none;
+      color: $color-link;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-link-hover;
+      }
+    }
+  }
+
+  .main-card {
+    background-image: linear-gradient(
+      to bottom,
+      $color-gradient-orange,
+      $color-gradient-pink
+    );
+    color: $color-white;
+    font-weight: $fw-extra-bold;
+    line-height: 40px;
+  }
+}
+
+/*---------- FOOTER ----------*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3.2rem 14.3rem;
+  background-color: $color-main-text;
+
+  .btn-gradient-2 {
+    background-image: linear-gradient(
+      to bottom,
+      $color-gradient-blue -54.32%,
+      $color-gradient-pink 100%
+    );
+
+    &:hover {
+      background-image: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.5)
+        ),
+        linear-gradient(180deg, $color-btn1-hover, $color-link-hover);
+    }
+  }
+}
